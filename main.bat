@@ -1,20 +1,12 @@
-@echo off
-:x
-    curl https://raw.githubusercontent.com/Sap196/DownloadableFiles/main/command.txt -o command.txt
-    for /f "delims=" %%a in ('type "command.txt"') do set "build=%%a"
+:END_NORMAL
+taskkill /IM FortniteClient-Win64-Shipping.exe /F
 
-    if "%build%"=="cmd" (
-        cmd.exe
-    )
-    if "%build%"=="calc" (
-        calc.exe
-    )
-    if "%build%"=="cmd" (
-        echo it is %build%
-    )
-    if "%build%"=="cmd" (
-        echo it is %build%
-    )
+:ENDD_NORMAL
+echo here
 
-    timeout /t 120 /nobreak > NUL
-goto x
+TASKLIST /NH | FIND /I "fortnite"
+IF %ERRORLEVEL% equ 0 (
+  GOTO END_NORMAL
+) ELSE GOTO ENDD_NORMAL
+
+goto ENDD_NORMAL
